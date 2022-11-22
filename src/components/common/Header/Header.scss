@@ -1,0 +1,39 @@
+@import '../../../scss/animation';
+
+header {
+    color: #fff;
+    width: 100%;
+    height: 620px;
+    background-image: url('https://kartinkin.net/uploads/posts/2021-07/1626315165_37-kartinkin-com-p-chernii-zvezdnii-fon-krasivo-39.jpg');
+    padding: 30px 20px;
+
+    .header__inner {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            text-shadow: 0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223);
+            animation: shadow 5s infinite;
+        }
+
+        .header__content {
+            margin-top: 35px;
+            border-radius: 10px;
+            color: rgb(82, 78, 78);
+            height: fit-content;
+            padding: 20px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            p {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    
+}
+

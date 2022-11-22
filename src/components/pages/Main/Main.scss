@@ -1,0 +1,58 @@
+@import '../../../scss/animation';
+
+.main {
+    padding: 40px 0;
+
+    .main__inner {
+        
+        .main__title {
+            text-align: center;
+
+            .title__text {
+                margin-top: 10px;
+
+                >span {
+                    cursor: pointer;
+                    animation: shadow 3s infinite;
+                    text-shadow: 0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223);
+
+                }
+
+            }
+        }
+
+        .main__items {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .main__item {
+                width: 33%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 30px;
+                >img {
+                    border-radius: 7px;
+                    width: 200px;
+                    height: 300px;
+                    cursor: pointer;
+                    margin-bottom: 8px;
+                }
+                .item__title {
+                    cursor: pointer;
+                }
+            }
+
+            .item__rating {
+                display: flex;
+                align-items: center;
+
+                >span {
+                    font-size: 20px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
