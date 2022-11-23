@@ -3,7 +3,7 @@
 header {
     color: #fff;
     width: 100%;
-    height: 620px;
+    height: 720px;
     background-image: url('https://kartinkin.net/uploads/posts/2021-07/1626315165_37-kartinkin-com-p-chernii-zvezdnii-fon-krasivo-39.jpg');
     padding: 30px 20px;
 
@@ -15,7 +15,8 @@ header {
 
         h1 {
             text-shadow: 0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223);
-            animation: shadow 5s infinite;
+            animation: dropIn 1s ease forwards;
+            
         }
 
         .header__content {
@@ -28,6 +29,7 @@ header {
             display: flex;
             align-items: center;
             flex-direction: column;
+            animation: dropIn 0.5s ease forwards;
 
             p {
                 margin-bottom: 10px;

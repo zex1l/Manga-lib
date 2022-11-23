@@ -7,3 +7,12 @@
         text-shadow: 0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223);
     }
 }
+
+@keyframes dropIn {
+    from {
+        transform: translateY(-500px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

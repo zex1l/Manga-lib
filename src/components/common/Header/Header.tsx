@@ -12,6 +12,7 @@ const Header = () => {
                     <p>Оценки и топ выставляю по своему мнению</p>
                     <p>Приятного просмотра!</p>
                 </div>
+                {/* <img src="https://media4.giphy.com/media/NyMaiJVuPmPKcYbbKd/giphy.gif?cid=ecf05e477h4np4f9yfng5cbcso34z90jd1vggnqgv73i04k0&rid=giphy.gif&ct=s" alt="" /> */}
             </div>
         </header>
     );

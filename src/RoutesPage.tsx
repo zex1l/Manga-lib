@@ -7,7 +7,7 @@ const RoutesPage = () => {
         <BrowserRouter>
             <Routes>
             {routes.map(route => (
-                <Route path={route.url} element={<route.component/>}/>
+                <Route key={route.url} path={route.url} element={<route.component/>}/>
             ))}
             </Routes>
         </BrowserRouter>

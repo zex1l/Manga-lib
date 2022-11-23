@@ -11,7 +11,9 @@
             .title__text {
                 margin-top: 10px;
 
-                >span {
+                >a {
+                    color: #fff;
+                    text-decoration: none;
                     cursor: pointer;
                     animation: shadow 3s infinite;
                     text-shadow: 0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223),0 0 1px rgb(179, 179, 223);
