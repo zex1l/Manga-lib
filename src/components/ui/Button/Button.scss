@@ -1,0 +1,18 @@
+@import '../../../scss/animation';
+
+button {
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    background-color: #fff;
+    margin-top: 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: background-color 0.4s ease;
+    animation: opacity 2s ease forwards;
+
+    &:hover {
+        background-color: rgb(20, 54, 227);
+        color: #fff
+    }
+}

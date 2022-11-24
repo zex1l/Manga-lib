@@ -1,0 +1,97 @@
+@import '../../../scss/animation';
+
+.manga {
+
+    .manga__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 60px;
+ 
+        .sidebar__img {
+            margin-right: 30px;
+            >img {
+                margin-bottom: 30px;
+                border-radius: 2px;
+            }
+
+            >a {
+                text-decoration: none;
+                color: rgb(145, 140, 140);
+                transition: color 0.3s ease;
+                
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+        
+
+        .manga__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+
+            .content__header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                animation: dropRigth 0.7s ease forwards;
+
+                .content__title {
+                    font-size: 30px;
+                }
+
+                .content__rating {
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+                    >span {
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            .content__wrapper {
+                width: 80%;
+                margin-top: 28px;
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 31px 25px;
+                animation: dropRigth 1s ease forwards;
+
+                .content__description {
+                    color: #000;
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+
+                .content__review {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    color: #000;
+                    font-size: 18px;
+                    line-height: 30px;
+
+                    .review__logo {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+
+                        .review {
+                            flex: 12;
+                            text-align: center;
+                        }
+                        .close {
+                            cursor: pointer;
+                        }
+                    }
+
+                    .review__content {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

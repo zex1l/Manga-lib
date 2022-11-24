@@ -1,7 +1,7 @@
 import  { FC } from 'react';
 
 import Main from './components/pages/Main/Main'
-import SingleManga from './components/ui/SingleManga/SingleManga'
+import SingleManga from './components/pages/SingleManga/SingleManga'
 
 interface IRoute {
     component: FC,

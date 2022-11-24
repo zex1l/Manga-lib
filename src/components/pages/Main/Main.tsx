@@ -1,36 +1,27 @@
 import { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
 
 import Layout from "../../common/Layout/Layout";
-import { Imanga } from "../../../types/types";
-import { db } from "../../../store/store";
+import { IManga } from "../../../types/types";
+
+import { fetchAllManga } from "../../../api/$api";
 
 import './Main.scss'
 import starIcon from '../../../img/icons/star.svg'
 
 
 const Main = () => {
-    const [manga, setManga] = useState<Imanga[]>()
+    const [manga, setManga] = useState<IManga[]>()
     const [loading, setLoading] = useState(true)
 
     const navigate = useNavigate()
 
-    const fetchData = async () => {
-        const data= await getDocs(collection(db, 'manga'))
-        const dataList  = [] as Imanga[]
-        data.forEach(item => {
-            dataList.push(item.data() as Imanga)
-        })
-        setManga(dataList)
-        setLoading(false)
-    }
 
     const onNavigateSingleManga  = (id : string) : void => {
-        navigate(`/manga/:${id}`)
+        navigate(`/manga/${id}`)
     }
     useEffect(() => {
-        fetchData()
+        fetchAllManga(setManga, setLoading)
     }, [])
 
     return (
