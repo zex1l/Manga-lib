@@ -12,7 +12,8 @@ const SingleManga : FC = () => {
     const {id} = useParams()
 
     useEffect(() => {
-        fetchCurrentManga(id, setCurrManga, setLoading)
+       fetchCurrentManga(id,  setLoading)
+        .then(res => setCurrManga(res))
     }, [])
 
     console.log(currManga)

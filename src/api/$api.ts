@@ -21,12 +21,12 @@ export const fetchAllManga = async (setManga : Function, setLoading: Function) =
 
 }
 
-export const fetchCurrentManga = async (id : string | undefined, setCurrManga : Function, setLoading : Function) => {
+export const fetchCurrentManga = async (id : string | undefined,  setLoading : Function) => {
     setLoading(true)
     const data  = await getDocs(collection(db, 'manga'))
     let currentManga = {} as IManga
 
-    data.forEach(item => {
+     data.forEach(item => {
         if(item.id === id) {
             currentManga = {
                 id: item.id,
@@ -39,5 +39,5 @@ export const fetchCurrentManga = async (id : string | undefined, setCurrManga : 
         }
     })
     setLoading(false)
-    setCurrManga(currentManga)
+    return currentManga
 }

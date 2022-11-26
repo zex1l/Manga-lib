@@ -5,7 +5,7 @@ import Button from '../Button/Button';
 
 import './CurrentManga.scss'
 import StarSvg from '../../../img/icons/star.svg'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 interface ICurrManga {
     manga : IManga
@@ -14,6 +14,7 @@ interface ICurrManga {
 const CurrentManga : FC<ICurrManga> = ({manga : {description, id, img, rating, title, review}}) => {
     const [show, setShow] = useState(false)
 
+    const isAdmin = !!localStorage.getItem('token')
 
     return (
         <div className='manga'>
@@ -22,6 +23,7 @@ const CurrentManga : FC<ICurrManga> = ({manga : {description, id, img, rating, t
                     <div className="sidebar__img">
                         <img width={250} height={400} src={img} alt="Img manga" />
                         <Link to='/'>Главная</Link>
+                        <Link to={isAdmin ? `/manga/${id}/edit` : `/manga/${id}/login`}>Редактировать</Link>
                     </div>
                     <div className="manga__content">
                         <div className="content__header">
