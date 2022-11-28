@@ -2,7 +2,7 @@ export interface IManga {
     id: string
     img: string
     title: string
-    rating: number 
+    rating: string 
     description: string
     review: string
 }

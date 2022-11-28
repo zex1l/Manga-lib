@@ -1,4 +1,4 @@
-import { getDocs, collection} from "firebase/firestore"
+import { getDocs, collection, addDoc, doc, deleteDoc} from "firebase/firestore"
 import { IManga } from "../types/types"
 import { db } from "../store/store"
 
@@ -40,4 +40,22 @@ export const fetchCurrentManga = async (id : string | undefined,  setLoading : F
     })
     setLoading(false)
     return currentManga
+}
+
+export const updateManga = async(manga : IManga) => {
+    try {
+        await deleteDoc(doc(db, 'manga', manga.id))
+        const updateManga = {
+            img: manga.img,
+            title: manga.title,
+            rating: manga.rating,
+            description: manga.description,
+            review: manga.review
+        }
+        const data = await addDoc(collection(db, 'manga'), updateManga)
+        return data
+        
+    } catch (error) {
+        console.log(error)
+    }
 }
